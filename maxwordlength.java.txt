@@ -1,0 +1,18 @@
+import java.util.*;
+public class maxwordlength {
+
+    public static void main(String[] args) {
+        String arr[]= (new Scanner(System.in)).nextLine().split(" ");
+        int max=0, lenArr[]=new int[1001];
+        for(String S:arr) {
+            int n = S.length();
+            lenArr[n]++;
+            if(lenArr[n]>max) max = lenArr[n];
+        }
+        for(String S:arr) {
+            int n=S.length();
+            if(lenArr[n]==max)
+                System.out.print(S+" ");
+        }
+    }
+}

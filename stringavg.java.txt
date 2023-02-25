@@ -1,0 +1,19 @@
+import java.util.*;
+public class stringavg {
+
+    public static void main(String[] args) {
+String[] s =sc.nextLine().split(" ");
+         int dis=0,t=0;
+         for(int i=0;i<s.length;i++){
+             int a = Integer.parseInt(s[i].substring(0,s[i].indexOf('@')));
+             int b = Integer.parseInt((s[i].substring((s[i].indexOf('@')+1))));
+             dis+=a;
+             t+=b;
+         }
+         float avg = (float)dis/t;
+         System.out.format("%.2f",avg);
+         System.out.print("kmpf");
+
+        
+    }
+}

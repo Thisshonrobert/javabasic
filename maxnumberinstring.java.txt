@@ -1,0 +1,23 @@
+import java.util.*;
+public class maxnumberinstring {
+
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        char[] ch = s.toCharArray();
+        int max=0;
+        for(int i=0;i<s.length();i++){
+            int num=0;
+            while(i<s.length() && Character.isDigit(ch[i])){
+               num=num*10+Character.getNumericValue(ch[i]);
+                i++;
+            }
+            if(num>max){
+                max=num;
+           }
+       }
+        System.out.print(max);
+       
+        }
+    }
+}

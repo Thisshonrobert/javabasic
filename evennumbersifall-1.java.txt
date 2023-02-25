@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class evennumbersifall-1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        String val="";
+        for(int i=0;i<s.length();i++){
+            int n = s.charAt(i)-'0';
+            if(n%2==0){
+             val+= n;
+            }
+        }
+        if(s.length()==val.length()){
+            System.out.println("-1");
+        }else System.out.println(val);
+
+    }
+
+}

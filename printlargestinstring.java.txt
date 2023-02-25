@@ -1,0 +1,25 @@
+import java.util.*;
+public class printlargest {
+
+    public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+    String s1 = sc.nextLine();
+    String s2 = sc.nextLine();
+    String[] ss1=s1.split(" ");
+    String[] ss2=s2.split(" ");
+    String res="";
+    int i,j;
+    for(i=0,j=0;i<ss1.length && j<ss2.length;i++,j++){
+        if(ss1[i].length()>ss2[j].length()){
+            res+=ss1[i]+" ";
+        }
+        else
+                res+=ss2[j]+" ";
+    }
+    for(;i< ss1.length;i++) { res+=ss1[i]+" "; }
+    for(;j<ss2.length;j++) { res+=ss2[j]+" "; }
+        System.out.println(res.substring(0,res.length()-1));
+
+        
+    }
+}

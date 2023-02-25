@@ -1,0 +1,22 @@
+import java.util.*;
+class removeconstantstring {
+    public static boolean vowel(char ch){
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+            return true;
+        }
+        else return false;
+    }
+    public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            String s = sc.next();
+            int n =0;
+            for(int i=0;i<s.length();i++){
+                if(vowel(s.charAt(i))){
+                    n=i;
+                    StringBuilder sb = new StringBuilder(s);
+                    String st = sb.reverse().toString();
+                    System.out.print(st.charAt(n));
+                }
+            
+    }
+}

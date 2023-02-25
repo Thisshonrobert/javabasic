@@ -1,0 +1,14 @@
+import java.util.*;
+public class zoho1 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+        int num1=Integer.parseInt(s1.replaceAll("\\.",""));
+        int num2=Integer.parseInt(s2.replaceAll("\\.",""));
+        if(num1>num2) System.out.println("downgrade");
+        else if(num1<num2) System.out.println("upgrade");
+        else System.out.println("same");
+
+    }
+}

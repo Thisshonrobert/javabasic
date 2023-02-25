@@ -1,0 +1,32 @@
+import java.util.*;
+public class zoho2 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s = sc.next();
+        int arr1[] = new int[s.length()/2-1];
+        char arr2[] = new char[s.length()/2-2];
+        int size1=0,size2=0;
+        char[] ch = s.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            if(ch[i]=='+' || ch[i]=='-' || ch[i]=='='){
+                arr2[size2++]=ch[i];
+            }
+        }
+        for(int i=0;i<s.length();i++){
+            int num=0;
+            while((i<s.length() &&Character.isDigit(s.charAt(i)))){
+                num=num*10+Character.getNumericValue(s.charAt(i));
+                i++;
+            }
+            arr1[size1++]+=num;
+        }
+        int sum=arr1[0];
+        for(int i=1,j=0;i<size1-1 && j<size2-1;i++,j++){
+            if(arr2[j]=='+') sum+=arr1[i];
+            else if(arr2[j]=='-') sum-=arr1[i];
+        }
+
+        if(sum==arr1[arr1.length-1]) System.out.println("yes");
+        else System.out.println("no");
+    }
+}
